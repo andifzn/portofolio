@@ -162,7 +162,6 @@ main {
     font-family: "DM Sans", sans-serif;
     font-size: 1.35rem;
     display: block;
-    width: 85%;
     font-weight: 800;
 }
 
@@ -171,9 +170,11 @@ main {
     font-family: "DM Sans", sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
-    text-align: center;
-    display: inline;
-    margin: auto;
+}
+
+.typed-cursor {
+    font-weight: 800;
+    color: var(--textColor);
 }
 
 .hero-text p {
