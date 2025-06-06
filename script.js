@@ -28,3 +28,14 @@ var typed = new Typed("#element", {
     cursorChar: '|',
     loop: true,
 });
+
+var typed = new Typed("#about-element", {
+    strings: ["Front End Developer", "PC - Laptop Repair", "UI / UX Designer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    showCursor: true,
+    cursorChar: "|",
+    loop: true,
+});
+
