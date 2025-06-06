@@ -710,7 +710,7 @@ svg {
         width: 30%;
     }
 
-    .skills-items img {
+    .skills-items img,svg {
         height: 50px;
     }
 
@@ -867,7 +867,7 @@ svg {
         width: 30%;
     }
 
-    .skills-items img {
+    .skills-items img,svg {
         height: 50px;
     }
 
