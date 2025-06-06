@@ -221,7 +221,7 @@ main {
     display: flex;
     justify-content: center;
     font-family: "Lexend", sans-serif;
-    margin-bottom: 40px;
+    margin-bottom: 90px;
 }
 
 .services-header h1 {
@@ -325,7 +325,7 @@ main {
 }
 
 .skills-header {
-    margin-bottom: 40px;
+    margin-bottom: 90px;
     display: flex;
     justify-content: center;
 }
@@ -406,7 +406,7 @@ svg {
 }
 
 .about-header {
-    margin-bottom: 40px;
+    margin-bottom: 90px;
     display: flex;
     justify-content: center;
 }
@@ -440,13 +440,17 @@ svg {
     padding: 0 20px;
 }
 
+.about-image {
+    display: none;
+}
+
 .about-main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
     gap: 30px 0;    
 }
-
 
 .about-main-header h1 {
     font-family: 'Poppins', sans-serif;
@@ -532,6 +536,10 @@ svg {
     .hero-image {
         display: none;
     }
+
+    .about-image {
+        display: none;
+    }
 }
 
 /* Ukuran Handphone Sedang */
@@ -569,6 +577,11 @@ svg {
 
     .skills-items h1 {
         font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-image {
+        display: none;
     }
 }
 
@@ -631,6 +644,39 @@ svg {
 
     .skills-items h1 {
         font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .about-text p {
+        font-size: 0.85rem;
+    }
+
+    .about-experience {
+        width: 100%;
+    }
+
+    .about-experience-items {
+        width: 20%;
+    }
+
+    .about-experience-items h1 {
+        font-size: 1.35rem;
+    }
+
+    .about-experience-items p {
+        font-size: 0.85rem;
+    }
+
+    .about-cta a {
+        font-size: 0.9rem;
     }
 }
 
@@ -714,6 +760,49 @@ svg {
 
     .skills-items h1 {
         font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-header h1 {
+        font-size: 1.95rem;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .about-main-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .about-main-header h2 #about-element{
+        font-size: 1.35rem;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    .about-experience {
+        justify-content: center;
+        gap: 0 20px;
+        width: 100%;
+    }
+
+    .about-experience-items {
+        width: 25%;
+    }
+
+    .about-experience-items h1 {
+        font-size: 1.75rem;
+    }
+
+    .about-experience-items p {
+        font-size: 0.9rem;
+    }
+
+    .about-cta a {
+        font-size: 0.9rem;
     }
 }
 
@@ -872,6 +961,77 @@ svg {
     .skills-items h1 {
         font-size: 1.25rem;
     }
+
+    /* About Section */
+    .about {
+        height: auto;
+    }
+    
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .about-image {
+        display: block;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-main {
+        align-items: start;
+        width: 40%;
+    }
+
+    .about-main-header h1 {
+        font-size: 1.9rem;
+        line-height: 30px;
+    }
+    
+    .about-main-header h2 {
+        text-align: left;
+    }
+
+    .about-main-header h2 #about-element{
+        font-size: 1.75rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-experience {
+        justify-content: start;
+        gap: 0 20px;
+        width: 100%;
+    }
+
+    .about-experience-items {
+        width: 45%;
+    }
+
+    .about-experience-items h1 {
+        font-size: 1.9rem;
+    }
+
+    .about-experience-items p {
+        font-size: 1rem;
+    }
+
+    .about-cta {
+        gap: 0 25px;
+    }
+
+    .about-cta a {
+        font-size: 1rem;
+    }
 }
 
 /* Ukuran Desktop */
@@ -1028,5 +1188,76 @@ svg {
 
     .skills-items h1 {
         font-size: 1.25rem;
+    }
+
+    /* About Section */
+    .about {
+        height: auto;
+    }
+    
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .about-image {
+        display: block;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-main {
+        align-items: start;
+        width: 40%;
+    }
+
+    .about-main-header h1 {
+        font-size: 1.9rem;
+        line-height: 30px;
+    }
+    
+    .about-main-header h2 {
+        text-align: left;
+    }
+
+    .about-main-header h2 #about-element{
+        font-size: 1.75rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-experience {
+        justify-content: start;
+        gap: 0 20px;
+        width: 100%;
+    }
+
+    .about-experience-items {
+        width: 45%;
+    }
+
+    .about-experience-items h1 {
+        font-size: 1.9rem;
+    }
+
+    .about-experience-items p {
+        font-size: 1rem;
+    }
+
+    .about-cta {
+        gap: 0 25px;
+    }
+
+    .about-cta a {
+        font-size: 1rem;
     }
 }
