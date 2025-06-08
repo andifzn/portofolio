@@ -18,7 +18,7 @@ document.addEventListener("click", (e) => {
 var typed = new Typed("#element", {
     strings: [
         "Front End Developer",
-        "PC-Laptop Repair",
+        "PC - Laptop Repair",
         "UI / UX Designer",
     ],
     typeSpeed: 100,

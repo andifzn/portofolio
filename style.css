@@ -240,13 +240,13 @@ main {
 }
 
 .services-header h1:before {
-    content: '';
+    content: "";
     background-color: var(--borderColor);
     position: absolute;
     width: 90%;
     left: 5%;
     bottom: -20%;
-    height: 2px; 
+    height: 2px;
 }
 
 .services-content {
@@ -347,13 +347,13 @@ main {
 }
 
 .skills-header h1:before {
-    content: '';
+    content: "";
     background-color: var(--borderColor);
     position: absolute;
     width: 90%;
     left: 5%;
     bottom: -20%;
-    height: 2px; 
+    height: 2px;
 }
 
 .skills-content {
@@ -401,7 +401,7 @@ svg {
 
 /* About Section */
 .about {
-    height: 100dvh;
+    height: auto;
     padding: 40px 0;
 }
 
@@ -414,7 +414,7 @@ svg {
 .about-header h1 {
     position: relative;
     display: block;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     color: var(--textColor);
     font-size: 1.5rem;
     text-align: center;
@@ -427,13 +427,13 @@ svg {
 }
 
 .about-header h1:before {
-    content: '';
+    content: "";
     background-color: var(--borderColor);
     position: absolute;
     width: 90%;
     left: 5%;
     bottom: -20%;
-    height: 2px; 
+    height: 2px;
 }
 
 .about-content {
@@ -449,11 +449,11 @@ svg {
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    gap: 30px 0;    
+    gap: 30px 0;
 }
 
 .about-main-header h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--textColor);
     font-size: 1.35rem;
     font-weight: 600;
@@ -465,7 +465,7 @@ svg {
 }
 
 .about-main-header h2 #about-element {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--textColor);
     font-size: 1rem;
 }
@@ -478,7 +478,7 @@ svg {
 
 .about-text p {
     display: block;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     color: var(--paragraphColor);
     font-size: 0.75rem;
     text-align: justify;
@@ -493,14 +493,14 @@ svg {
     width: 20%;
 }
 
-.about-experience-items h1{
-    font-family: 'Poppins', sans-serif;
+.about-experience-items h1 {
+    font-family: "Poppins", sans-serif;
     color: var(--textColor);
     font-size: 1rem;
 }
 
 .about-experience-items p {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     color: var(--heading);
     font-size: 0.75rem;
 }
@@ -530,6 +530,130 @@ svg {
     background-color: var(--paragraphColor);
 }
 
+/* Portofolio Section */
+.portofolio {
+    height: auto;
+    padding: 40px 0;
+}
+
+.portofolio-header {
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.portofolio-header h1 {
+    position: relative;
+    display: block;
+    font-family: "Lexend", sans-serif;
+    color: var(--textColor);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    width: max-content;
+}
+
+.portofolio-header strong {
+    font-weight: 700;
+    color: var(--hoverColor);
+}
+
+.portofolio-header h1:before {
+    content: "";
+    background-color: var(--borderColor);
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    bottom: -20%;
+    height: 2px;
+}
+
+.portofolio-main {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+}
+
+.portofolio-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+    padding: 5px 5px 20px 5px;
+    border-radius: 23px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--borderColor);
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.portofolio-card:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.portofolio-card-image {
+    background-image: url("assets/img/toko-mekkah.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    border-radius: 23px;
+}
+
+.portofolio-card-image.wedding {
+    background-image: url("assets/img/wedding.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    border-radius: 23px;
+}
+
+.portofolio-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+.portofolio-card-text h1 {
+    font-family: "Poppins", sans-serif;
+    color: var(--textColor);
+    font-size: 1.35rem;
+    line-height: 0;
+}
+
+.portofolio-card-text p {
+    font-family: "Work Sans", sans-serif;
+    color: var(--heading);
+    font-size: 1.2rem;
+    line-height: 20px;
+}
+
+.portofolio-card-text a {
+    display: block;
+    width: max-content;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: var(--textColor);
+    font-weight: 550;
+    background-color: var(--buttonColor);
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s linear;
+}
+
+.portofolio-card-text a:hover {
+    transform: scale(1.1);
+    background-color: var(--paragraphColor);
+}
 
 /* Ukuran Handphone Umum */
 @media only screen and (min-width: 361px) and (max-width: 480px) {
@@ -539,6 +663,15 @@ svg {
 
     .about-image {
         display: none;
+    }
+
+    /* Portofolio Section */
+    .portofolio-card-image {
+        height: 300px;
+    }
+
+    .portofolio-card-image.wedding {
+        height: 300px;
     }
 }
 
@@ -582,6 +715,19 @@ svg {
     /* About Section */
     .about-image {
         display: none;
+    }
+
+    /* Portofolio Section */
+    .portofolio-card {
+        padding: 15px 15px 20px 15px;
+    }
+
+    .portofolio-card-image {
+        height: 350px;
+    }
+
+    .portofolio-card-image.wedding {
+        height: 350px;
     }
 }
 
@@ -668,7 +814,7 @@ svg {
     }
 
     .about-experience-items h1 {
-        font-size: 1.35rem;
+        font-size: 1.75rem;
     }
 
     .about-experience-items p {
@@ -677,6 +823,41 @@ svg {
 
     .about-cta a {
         font-size: 0.9rem;
+    }
+
+    /* portofolio Section */
+    .portofolio-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .portofolio-main {
+        align-items: center;
+    }
+
+    .portofolio-card {
+        width: 70%;
+        padding: 15px 15px 20px 15px;
+    }
+
+    .portofolio-card-image {
+        height: 300px;
+    }
+
+    .portofolio-card-image.wedding {
+        width: 100%;
+        height: 300px;
+    }
+
+    .portofolio-card-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .portofolio-card-text p {
+        font-size: 0.85rem;
+    }
+
+    .portofolio-card-text a {
+        font-size: 0.85rem;
     }
 }
 
@@ -775,7 +956,7 @@ svg {
         font-size: 1.75rem;
     }
 
-    .about-main-header h2 #about-element{
+    .about-main-header h2 #about-element {
         font-size: 1.35rem;
     }
 
@@ -802,6 +983,44 @@ svg {
     }
 
     .about-cta a {
+        font-size: 0.9rem;
+    }
+
+    /* portofolio Section */
+    .portofolio-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .portofolio-main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .portofolio-card {
+        width: 45%;
+        padding: 15px 15px 20px 15px;
+    }
+
+    .portofolio-card-image {
+        height: 300px;
+    }
+
+    .portofolio-card-image.wedding {
+        width: 100%;
+        height: 300px;
+    }
+
+    .portofolio-card-text h1 {
+        font-size: 1.75rem;
+        line-height: 30px;
+    }
+
+    .portofolio-card-text p {
+        font-size: 1.35rem;
+        line-height: 30px;
+    }
+
+    .portofolio-card-text a {
         font-size: 0.9rem;
     }
 }
@@ -875,8 +1094,8 @@ svg {
     }
 
     .hero-image img {
-        height: 470px;
-        width: 330px;
+        height: 450px;
+        width: 290px;
     }
 
     .hero-text {
@@ -954,7 +1173,8 @@ svg {
         width: 30%;
     }
 
-    .skills-items img,svg {
+    .skills-items img,
+    svg {
         height: 50px;
     }
 
@@ -966,7 +1186,7 @@ svg {
     .about {
         height: auto;
     }
-    
+
     .about-header h1 {
         font-size: 2rem;
     }
@@ -994,12 +1214,12 @@ svg {
         font-size: 1.9rem;
         line-height: 30px;
     }
-    
+
     .about-main-header h2 {
         text-align: left;
     }
 
-    .about-main-header h2 #about-element{
+    .about-main-header h2 #about-element {
         font-size: 1.75rem;
     }
 
@@ -1030,6 +1250,44 @@ svg {
     }
 
     .about-cta a {
+        font-size: 1rem;
+    }
+
+    /* portofolio Section */
+    .portofolio-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .portofolio-main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .portofolio-card {
+        width: 45%;
+        padding: 15px 15px 20px 15px;
+    }
+
+    .portofolio-card-image {
+        height: 300px;
+    }
+
+    .portofolio-card-image.wedding {
+        width: 100%;
+        height: 300px;
+    }
+
+    .portofolio-card-text h1 {
+        font-size: 1.9rem;
+        line-height: 30px;
+    }
+
+    .portofolio-card-text p {
+        font-size: 1.75rem;
+        line-height: 30px;
+    }
+
+    .portofolio-card-text a {
         font-size: 1rem;
     }
 }
@@ -1182,7 +1440,8 @@ svg {
         width: 30%;
     }
 
-    .skills-items img,svg {
+    .skills-items img,
+    svg {
         height: 50px;
     }
 
@@ -1194,7 +1453,7 @@ svg {
     .about {
         height: auto;
     }
-    
+
     .about-header h1 {
         font-size: 2rem;
     }
@@ -1222,12 +1481,12 @@ svg {
         font-size: 1.9rem;
         line-height: 30px;
     }
-    
+
     .about-main-header h2 {
         text-align: left;
     }
 
-    .about-main-header h2 #about-element{
+    .about-main-header h2 #about-element {
         font-size: 1.75rem;
     }
 
@@ -1258,6 +1517,43 @@ svg {
     }
 
     .about-cta a {
+        font-size: 1rem;
+    }
+    /* portofolio Section */
+    .portofolio-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .portofolio-main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .portofolio-card {
+        width: 45%;
+        padding: 15px 15px 20px 15px;
+    }
+
+    .portofolio-card-image {
+        height: 300px;
+    }
+
+    .portofolio-card-image.wedding {
+        width: 100%;
+        height: 300px;
+    }
+
+    .portofolio-card-text h1 {
+        font-size: 1.9rem;
+        line-height: 30px;
+    }
+
+    .portofolio-card-text p {
+        font-size: 1.75rem;
+        line-height: 30px;
+    }
+
+    .portofolio-card-text a {
         font-size: 1rem;
     }
 }
