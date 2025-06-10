@@ -16,16 +16,12 @@ document.addEventListener("click", (e) => {
 });
 
 var typed = new Typed("#element", {
-    strings: [
-        "Front End Developer",
-        "PC - Laptop Repair",
-        "UI / UX Designer",
-    ],
+    strings: ["Front End Developer", "PC - Laptop Repair", "UI / UX Designer"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     showCursor: true,
-    cursorChar: '|',
+    cursorChar: "|",
     loop: true,
 });
 
@@ -39,3 +35,20 @@ var typed = new Typed("#about-element", {
     loop: true,
 });
 
+const inputs = document.querySelectorAll(".input");
+
+inputs.forEach((input) => {
+    // Tambahkan class "filled" saat ada isi
+    input.addEventListener("input", () => {
+        if (input.value.trim() !== "") {
+            input.classList.add("filled");
+        } else {
+            input.classList.remove("filled");
+        }
+    });
+
+    // Jalankan sekali saat halaman load (kalau ada value sebelumnya)
+    if (input.value.trim() !== "") {
+        input.classList.add("filled");
+    }
+});
