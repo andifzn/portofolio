@@ -479,6 +479,10 @@ svg {
     padding: 0 20px;
 }
 
+.projects-second {
+    display: none;
+}
+
 .swiper-container {
     position: relative;
     overflow: hidden;
@@ -522,7 +526,8 @@ svg {
     transition: all 0.3s ease-in-out;
 }
 
-.projects-card-image {
+.projects-card-image,
+.projects-card-image.wedding {
     background-image: url("assets/img/toko-mekkah.jpg");
     background-size: cover;
     background-position: center;
@@ -582,10 +587,14 @@ svg {
     background-color: var(--paragraphColor);
 }
 
+.swiper-pagination {
+    position: absolute;
+    bottom: 100px;
+}
+
 .swiper-pagination-bullet {
     background-color: white;
 }
-
 
 /* Contact Section */
 .contact {
@@ -610,7 +619,7 @@ svg {
 
 /* From Uiverse.io by rahilansari261 */
 .form {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
     border: 2px solid var(--borderColor);
     border-radius: 20px;
     box-sizing: border-box;
@@ -620,7 +629,7 @@ svg {
 }
 
 .title {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     color: var(--heading);
     font-size: 36px;
     font-weight: 600;
@@ -628,7 +637,7 @@ svg {
 
 .subtitle {
     color: var(--textColor);
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 16px;
     font-weight: 600;
     margin-top: 10px;
@@ -750,13 +759,9 @@ svg {
         display: none;
     }
 
-    /* Portofolio Section */
-    .portofolio-card-image {
-        height: 300px;
-    }
-
-    .portofolio-card-image.wedding {
-        height: 300px;
+    /* Projects Section */
+    .projects-second {
+        display: none;
     }
 }
 
@@ -802,17 +807,18 @@ svg {
         display: none;
     }
 
-    /* Portofolio Section */
-    .portofolio-card {
-        padding: 15px 15px 20px 15px;
+    /* Projects Section */
+    .projects-second {
+        display: none;
     }
 
-    .portofolio-card-image {
-        height: 350px;
+    .swiper-slide {
+        height: auto;
     }
 
-    .portofolio-card-image.wedding {
-        height: 350px;
+    .projects-card-image,
+    .projects-card-image.wedding {
+        height: 400px;
     }
 }
 
@@ -902,34 +908,33 @@ svg {
         font-size: 0.9rem;
     }
 
-    /* portofolio Section */
-    .portofolio-main {
-        align-items: center;
+    /* Projects Section */
+    .projects-second {
+        display: none;
     }
 
-    .portofolio-card {
-        width: 70%;
-        padding: 15px 15px 20px 15px;
+    .swiper-slide {
+        height: auto;
     }
 
-    .portofolio-card-image {
-        height: 300px;
+    .swiper-container {
+        width: 80%;
     }
 
-    .portofolio-card-image.wedding {
-        width: 100%;
-        height: 300px;
+    .projects-card-image,
+    .projects-card-image.wedding {
+        height: 400px;
     }
 
-    .portofolio-card-text h1 {
+    .projects-card-text h1 {
         font-size: 1.75rem;
     }
 
-    .portofolio-card-text p {
+    .projects-card-text p {
         font-size: 0.85rem;
     }
 
-    .portofolio-card-text a {
+    .projects-card-text a {
         font-size: 0.85rem;
     }
 }
@@ -1051,37 +1056,40 @@ svg {
         font-size: 0.9rem;
     }
 
-    /* portofolio Section */
-    .portofolio-main {
-        flex-direction: row;
+    /* Projects Section */
+    .projects-main {
+        display: none;
+    }
+
+    .projects-main.projects-second {
+        display: inline-block;
+    }
+
+    .projects-main.projects-second {
+        display: flex;
         justify-content: space-around;
     }
 
-    .portofolio-card {
-        width: 45%;
-        padding: 15px 15px 20px 15px;
+    .projects-card {
+        width: 48%;
     }
 
-    .portofolio-card-image {
-        height: 300px;
+    .projects-card-image,
+    .projects-card-image.wedding {
+        height: 400px;
     }
 
-    .portofolio-card-image.wedding {
-        width: 100%;
-        height: 300px;
-    }
-
-    .portofolio-card-text h1 {
+    .projects-card-text h1 {
         font-size: 1.75rem;
         line-height: 30px;
     }
 
-    .portofolio-card-text p {
+    .projects-card-text p {
         font-size: 1.35rem;
         line-height: 30px;
     }
 
-    .portofolio-card-text a {
+    .projects-card-text a {
         font-size: 0.9rem;
     }
 }
@@ -1306,37 +1314,40 @@ svg {
         font-size: 1rem;
     }
 
-    /* portofolio Section */
-    .portofolio-main {
-        flex-direction: row;
+    /* Projects Section */
+    .projects-main {
+        display: none;
+    }
+
+    .projects-main.projects-second {
+        display: inline-block;
+    }
+
+    .projects-main.projects-second {
+        display: flex;
         justify-content: space-around;
     }
 
-    .portofolio-card {
-        width: 45%;
-        padding: 20px;
+    .projects-card {
+        width: 40%;
     }
 
-    .portofolio-card-image {
+    .projects-card-image,
+    .projects-card-image.wedding {
         height: 300px;
     }
 
-    .portofolio-card-image.wedding {
-        width: 100%;
-        height: 300px;
-    }
-
-    .portofolio-card-text h1 {
+    .projects-card-text h1 {
         font-size: 1.9rem;
         line-height: 30px;
     }
 
-    .portofolio-card-text p {
+    .projects-card-text p {
         font-size: 1.75rem;
         line-height: 30px;
     }
 
-    .portofolio-card-text a {
+    .projects-card-text a {
         font-size: 1rem;
     }
 }
@@ -1409,8 +1420,8 @@ svg {
     }
 
     .hero-image img {
-        height: 700px;
-        width: 480px;
+        height: 650px;
+        width: 400px;
     }
 
     .hero-text {
@@ -1560,37 +1571,41 @@ svg {
     .about-cta a {
         font-size: 1rem;
     }
-    /* portofolio Section */
-    .portofolio-main {
-        flex-direction: row;
+
+    /* Projects Section */
+    .projects-main {
+        display: none;
+    }
+
+    .projects-main.projects-second {
+        display: inline-block;
+    }
+
+    .projects-main.projects-second {
+        display: flex;
         justify-content: space-around;
     }
 
-    .portofolio-card {
-        width: 45%;
-        padding: 15px 15px 20px 15px;
+    .projects-card {
+        width: 40%;
     }
 
-    .portofolio-card-image {
-        height: 300px;
+    .projects-card-image,
+    .projects-card-image.wedding {
+        height: 400px;
     }
 
-    .portofolio-card-image.wedding {
-        width: 100%;
-        height: 300px;
-    }
-
-    .portofolio-card-text h1 {
+    .projects-card-text h1 {
         font-size: 1.9rem;
         line-height: 30px;
     }
 
-    .portofolio-card-text p {
+    .projects-card-text p {
         font-size: 1.75rem;
         line-height: 30px;
     }
 
-    .portofolio-card-text a {
+    .projects-card-text a {
         font-size: 1rem;
     }
 }
