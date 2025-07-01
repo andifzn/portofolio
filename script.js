@@ -55,28 +55,16 @@ inputs.forEach((input) => {
 
 // Portofolio Button Section
 const buttons = document.querySelectorAll(".buttons button");
-
-const showSection = (id) => {
-    const allSections = document.querySelectorAll(".project-section");
-
-    allSections.forEach((section) => {
-        if (section.classList.contains("active")) {
-            section.classList.remove("active");
-            setTimeout(() => {
-                document.getElementById(id).classList.add("active");
-            }, 200); // delay biar efek fade-out selesai dulu
-        } else {
-            // Kalau section sebelumnya belum aktif, langsung tambahkan
-            if (section.id === id) {
-                section.classList.add("active");
-            }
-        }
-    });
-};
+const sections = document.querySelectorAll(".project-section");
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        const section = button.getAttribute("data-section");
-        showSection(section);
+        const targetId = button.getAttribute("data-section");
+
+        sections.forEach((section) => {
+            section.classList.remove("active");
+        });
+
+        document.getElementById(targetId).classList.add("active");
     });
 });
