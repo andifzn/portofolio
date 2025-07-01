@@ -520,7 +520,7 @@ svg {
     overflow: visible;
 }
 
-.poster-main {
+/* .poster-main {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -531,6 +531,18 @@ svg {
 .poster-main img{
     height: 150px;
     border-radius: 10px;
+} */
+
+.poster-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+}
+
+.poster-main img {
+    height: 250px;
+    border-radius: 5px;
 }
 
 .projects-main {
