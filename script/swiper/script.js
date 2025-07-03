@@ -12,7 +12,6 @@ let swiper = new Swiper(".swipper", {
     grabCursor: "true",
     spaceBetween: 30,
     centeredSlides: true,
-    mousewheel: true,
     autoplay: {
         delay: 3000,
     },

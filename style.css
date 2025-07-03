@@ -486,7 +486,7 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0 10px;
+    gap: 0 20px;
 }
 
 .portofolio-menu button {
@@ -502,10 +502,11 @@ svg {
     padding: 10px 15px;
     border-radius: 25px;
     transition: all 0.3s linear;
-        
 }
 
-.portofolio-menu button:active {
+.portofolio-menu button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
     background-color: var(--paragraphColor);
 }
 
@@ -524,19 +525,6 @@ svg {
     overflow: visible;
 }
 
-/* .poster-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px 0;
-}
-
-.poster-main img{
-    height: 150px;
-    border-radius: 10px;
-} */
-
 .poster-main {
     display: flex;
     flex-direction: column;
@@ -548,6 +536,10 @@ svg {
 .poster-main img {
     height: 250px;
     border-radius: 5px;
+}
+
+.poster-main img.portrait {
+    height: 360px;
 }
 
 .projects-main {
@@ -983,10 +975,20 @@ svg {
     }
 
     .about-cta a {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
     }
 
     /* Projects Section */
+    .portofolio-menu button {
+        font-size: 0.9rem;
+    }
+
+    .poster-main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
     .projects-second {
         display: none;
     }
@@ -1135,26 +1137,45 @@ svg {
     }
 
     /* Projects Section */
+    .portofolio-menu button {
+        font-size: 0.9rem;
+    }
+
+    .portofolio-menu button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: var(--paragraphColor);
+    }
+
+    .poster-main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
     .projects-main {
+        display: flex;
+    }
+
+    .projects-main.projects-second {
         display: none;
     }
 
-    .projects-main.projects-second {
-        display: inline-block;
-    }
-
-    .projects-main.projects-second {
-        display: flex;
-        justify-content: space-around;
+    .swipper {
+        height: 100vh;
     }
 
     .projects-card {
-        width: 48%;
+        width: 60%;
+        height: auto;
+        margin: auto;
     }
 
     .projects-card-image,
     .projects-card-image.wedding {
-        height: 400px;
+        background-position-y: -100px;
+        min-height: 250px;
     }
 
     .projects-card-text h1 {
@@ -1393,26 +1414,46 @@ svg {
     }
 
     /* Projects Section */
+    .portofolio-menu {
+        gap: 0 20px;
+    }
+
+    .portofolio-menu button {
+        font-size: 1rem;
+        width: 200px;
+    }
+
+    .portofolio-menu button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: var(--paragraphColor);
+    }
+
+    .poster-main {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
     .projects-main {
         display: none;
     }
 
     .projects-main.projects-second {
-        display: inline-block;
-    }
-
-    .projects-main.projects-second {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
+        align-items: center;
     }
 
     .projects-card {
-        width: 40%;
+        width: 35%;
+        height: auto;
     }
 
     .projects-card-image,
     .projects-card-image.wedding {
-        height: 300px;
+        min-height: 280px;
     }
 
     .projects-card-text h1 {
@@ -1432,6 +1473,7 @@ svg {
 
 /* Ukuran Desktop */
 @media (min-width: 1367px) {
+    /* Navbar Section */
     .navbar-logo h1 {
         font-size: 1.5rem;
     }
@@ -1490,7 +1532,7 @@ svg {
 
     .hero {
         justify-content: space-between;
-        padding: 0 100px;
+        padding: 0 70px;
     }
 
     .hero-image {
@@ -1498,8 +1540,8 @@ svg {
     }
 
     .hero-image img {
-        height: 650px;
-        width: 400px;
+        height: 450px;
+        width: 290px;
     }
 
     .hero-text {
@@ -1516,7 +1558,6 @@ svg {
 
     .hero-text h2 {
         font-size: 2.3rem;
-        width: 65%;
         line-height: 40px;
     }
 
@@ -1567,10 +1608,10 @@ svg {
 
     /* Skill Section */
     .skills-items {
-        padding: 15px 20px;
         flex-direction: row;
         align-items: center;
-        gap: 0 15px;
+        padding: 15px 20px;
+        gap: 0 20px;
         width: 30%;
     }
 
@@ -1651,26 +1692,46 @@ svg {
     }
 
     /* Projects Section */
+    .portofolio-menu {
+        gap: 0 20px;
+    }
+
+    .portofolio-menu button {
+        font-size: 1rem;
+        width: 200px;
+    }
+
+    .portofolio-menu button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: var(--paragraphColor);
+    }
+
+    .poster-main {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
     .projects-main {
         display: none;
     }
 
     .projects-main.projects-second {
-        display: inline-block;
-    }
-
-    .projects-main.projects-second {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
+        align-items: center;
     }
 
     .projects-card {
-        width: 40%;
+        width: 35%;
+        height: auto;
     }
 
     .projects-card-image,
     .projects-card-image.wedding {
-        height: 400px;
+        min-height: 280px;
     }
 
     .projects-card-text h1 {
