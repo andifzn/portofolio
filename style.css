@@ -687,6 +687,10 @@ svg {
     text-transform: uppercase;
 }
 
+.contact-sosmed {
+    display: none;
+}
+
 /* From Uiverse.io by rahilansari261 */
 .form {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
@@ -890,6 +894,10 @@ svg {
     .projects-card-image.wedding {
         height: 400px;
     }
+
+    .form {
+        width: 380px;
+    }
 }
 
 /* Ukuran Handphone Besar */
@@ -1016,6 +1024,23 @@ svg {
 
     .projects-card-text a {
         font-size: 0.85rem;
+    }
+
+    /* COntact Section */
+    .contact-text h1 {
+        font-size: 1.875rem;
+    }
+
+    .form {
+        width: 400px;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
     }
 }
 
@@ -1190,6 +1215,76 @@ svg {
 
     .projects-card-text a {
         font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact-main {
+        flex-direction: row;
+        justify-content: space-around;
+    }   
+
+    .contact-text {
+        min-width: 50%;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+
+    .contact-text h1 {
+        text-align: left;
+        font-size: 1.95rem;
+    }
+
+    .contact-sosmed {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+
+    .contact-sosmed h2 {
+        font-family: "Poppins", sans-serif;
+        color: var(--textColor);
+        font-size: 1.75rem;
+    }
+
+    .email {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+    }
+
+    .email p {
+        font-size: 0.9rem;
+        color: var(--paragraphColor);
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .contact-sosmed i {
+        display: block;
+        text-decoration: none;
+        color: var(--heading);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .sosmed-logo {
+        display: flex;
+        gap: 0 20px;
+        align-items: center;
+    }
+
+    .sosmed i:hover {
+        color: var(--textColor);
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.1);
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 1.35rem;
     }
 }
 
@@ -1495,7 +1590,7 @@ svg {
     }
 
     .contact-sosmed h2 {
-        font-family: 'Poppins';
+        font-family: 'Poppins',sans-serif;
         color: var(--textColor);
         font-size: 1.75rem;
     }
