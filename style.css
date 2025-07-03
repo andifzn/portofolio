@@ -701,7 +701,7 @@ svg {
 .title {
     font-family: "Lexend", sans-serif;
     color: var(--heading);
-    font-size: 36px;
+    font-size: 1.35rem;
     font-weight: 600;
 }
 
@@ -1467,6 +1467,89 @@ svg {
     }
 
     .projects-card-text a {
+        font-size: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contact-text {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    
+    .contact-text h1 {
+        font-size: 2.3rem;
+        text-align: left;
+    }
+
+    .contact-sosmed {
+        display: flex;
+        flex-direction: column;
+        gap: 25px 0;
+    }
+
+    .contact-sosmed h2 {
+        font-family: 'Poppins';
+        color: var(--textColor);
+        font-size: 1.75rem;
+    }
+
+    .email {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+    }
+
+    .email p {
+        font-size: 1rem;
+        color: var(--paragraphColor);
+        font-family: 'Work Sans', sans-serif ;
+    }
+
+    .sosmed {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+    }
+
+    .sosmed-logo {
+        display: flex;
+        gap: 0 20px;
+        align-items: center;
+    }
+
+    .contact-sosmed i {
+        display: block;
+        text-decoration: none;
+        color: var(--heading);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .sosmed i:hover {
+        color: var(--textColor);
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.1);
+    }
+
+    .form {
+        width: 500px;
+    }
+
+    .title {
+        font-size: 1.9rem;
+    }
+
+    .subtitle {
+        font-size: 1.75rem;
+    }
+
+    .input {
         font-size: 1rem;
     }
 }
