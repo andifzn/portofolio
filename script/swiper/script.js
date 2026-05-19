@@ -1,4 +1,5 @@
 let swiper = new Swiper(".swipper", {
+    slidesPerView: "auto",
     effect: "coverflow",
     coverflowEffect: {
         rotate: 0, //sudut rotasi slide samping
