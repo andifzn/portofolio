@@ -546,7 +546,7 @@ svg {
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px 0;
+    gap: 20px;
 }
 
 .projects-second {
@@ -609,6 +609,16 @@ svg {
 
 .projects-card-image.wedding {
     background-image: url("assets/img/wedding.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    border-radius: 23px;
+}
+
+.projects-card-image.wedding.wedding-second {
+    background-image: url("assets/img/sulis-yusuf-wedding.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1650,7 +1660,7 @@ svg {
 }
 
 /* Ukuran Desktop */
-@media (min-width: 1367px) {
+@media (min-width: 1366px) {
     /* Navbar Section */
     .navbar-logo h1 {
         font-size: 1.5rem;
@@ -1897,9 +1907,12 @@ svg {
 
     .projects-main.projects-second {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        gap: 40px 80px;
+        max-width: 100%;
     }
 
     .projects-card {
