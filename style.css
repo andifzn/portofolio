@@ -482,75 +482,12 @@ svg {
     gap: 30px 0;
 }
 
-.portofolio-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0 20px;
-}
-
-.portofolio-menu button {
-    display: block;
-    border: none;
-    width: 25%;
-    font-family: "Poppins", sans-serif;
-    font-size: 0.75rem;
-    text-decoration: none;
-    color: var(--textColor);
-    font-weight: 550;
-    background-color: var(--buttonColor);
-    padding: 10px 15px;
-    border-radius: 25px;
-    transition: all 0.3s linear;
-}
-
-.portofolio-menu button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    background-color: var(--paragraphColor);
-}
-
-.project-section {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
-}
-
-.active {
-    opacity: 1;
-    visibility: visible;
-    height: auto;
-    overflow: visible;
-}
-
-.poster-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px 0;
-    margin-top: 40px;
-}
-
-.poster-main img {
-    height: 250px;
-    border-radius: 5px;
-}
-
-.poster-main img.portrait {
-    height: 360px;
-}
-
-.projects-main {
+.project-main {
+    position: relative;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.projects-second {
-    display: none;
 }
 
 .swiper-container {
@@ -570,99 +507,66 @@ svg {
     display: flex;
 }
 
-.swiper-slide {
-    height: 24rem;
+.project-card-image {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.projects-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 30px 0;
-    padding: 5px 5px 20px 5px;
-    border-radius: 23px;
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    backdrop-filter: blur(10px);
-    border: 2px solid var(--borderColor);
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-}
-
-.projects-card-image,
-.projects-card-image.wedding {
-    background-image: url("assets/img/toko-mekkah.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 250px;
-    border-radius: 23px;
-}
-
-.projects-card-image.wedding {
-    background-image: url("assets/img/wedding.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 250px;
-    border-radius: 23px;
-}
-
-.projects-card-image.wedding.wedding-second {
+    height: 200px;
     background-image: url("assets/img/sulis-yusuf-wedding.png");
-    background-size: cover;
+    object-fit: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 250px;
-    border-radius: 23px;
+    background-size: cover;
+    border-radius: 8px 8px 0 0;
 }
 
-.projects-card-text {
+.project-card-image.second {
+    background: url('assets/img/wedding.jpg');
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.project-card-image.third {
+    background: url('assets/img/uni-reservasi.png');
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide {
     display: flex;
     flex-direction: column;
-    gap: 20px 0;
-    padding-left: 5px;
+    position: relative;
+    border-radius: 8px;
 }
 
-.projects-card-text h1 {
-    font-family: "Poppins", sans-serif;
-    color: var(--textColor);
-    font-size: 1.35rem;
-    line-height: 0;
-}
-
-.projects-card-text p {
+.card-text {
+    position: relative;
     font-family: "Work Sans", sans-serif;
-    color: var(--heading);
-    font-size: 1.2rem;
-    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    background-color:rgba(255, 255, 255, 0.15);;
+    border-radius: 0 0 8px 8px;
 }
 
-.projects-card-text a {
-    display: block;
-    width: max-content;
-    font-family: "Poppins", sans-serif;
-    font-size: 0.75rem;
-    text-decoration: none;
+.project-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+.card-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
     color: var(--textColor);
-    font-weight: 550;
-    background-color: var(--buttonColor);
-    padding: 10px 15px;
-    border-radius: 25px;
-    transition: all 0.3s linear;
+    font-weight: 600;
 }
 
-.projects-card-text a:hover {
-    transform: scale(1.1);
-    background-color: var(--paragraphColor);
+.card-text p {
+    font-size: 0.75rem;
+    color: var(--navbarText);
+    font-weight: 600;
 }
 
 .swiper-pagination {
@@ -780,7 +684,9 @@ svg {
     pointer-events: none;
     position: absolute;
     transform-origin: 0 50%;
-    transition: transform 200ms, color 200ms;
+    transition:
+        transform 200ms,
+        color 200ms;
     top: 20px;
 }
 
@@ -814,6 +720,7 @@ svg {
 }
 
 .submit {
+    font-family: "Poppins", sans-serif;
     background-color: var(--buttonColor);
     border-radius: 12px;
     border: 0;
@@ -827,6 +734,13 @@ svg {
     width: 100%;
 }
 
+.submit a {
+    text-decoration: none;
+    color: var(--textColor);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
 .submit:active {
     background-color: var(--hoverColor);
 }
@@ -838,11 +752,6 @@ svg {
     }
 
     .about-image {
-        display: none;
-    }
-
-    /* Projects Section */
-    .projects-second {
         display: none;
     }
 }
@@ -888,21 +797,6 @@ svg {
     .about-image {
         display: none;
     }
-
-    /* Projects Section */
-    .projects-second {
-        display: none;
-    }
-
-    .swiper-slide {
-        height: auto;
-    }
-
-    .projects-card-image,
-    .projects-card-image.wedding {
-        height: 400px;
-    }
-
     .form {
         width: 380px;
     }
@@ -994,44 +888,8 @@ svg {
         font-size: 0.75rem;
     }
 
-    /* Projects Section */
-    .portofolio-menu button {
-        font-size: 0.9rem;
-    }
-
-    .poster-main {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .projects-second {
-        display: none;
-    }
-
-    .swiper-slide {
-        height: auto;
-    }
-
     .swiper-container {
         width: 80%;
-    }
-
-    .projects-card-image,
-    .projects-card-image.wedding {
-        height: 400px;
-    }
-
-    .projects-card-text h1 {
-        font-size: 1.75rem;
-    }
-
-    .projects-card-text p {
-        font-size: 0.85rem;
-    }
-
-    .projects-card-text a {
-        font-size: 0.85rem;
     }
 
     /* COntact Section */
@@ -1169,67 +1027,19 @@ svg {
         font-size: 0.9rem;
     }
 
-    /* Projects Section */
-    .portofolio-menu button {
-        font-size: 0.9rem;
-    }
-
-    .portofolio-menu button:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        background-color: var(--paragraphColor);
-    }
-
-    .poster-main {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .projects-main {
+    .project-main {
         display: flex;
-    }
-
-    .projects-main.projects-second {
-        display: none;
     }
 
     .swipper {
         height: 100vh;
     }
 
-    .projects-card {
-        width: 60%;
-        height: auto;
-        margin: auto;
-    }
-
-    .projects-card-image,
-    .projects-card-image.wedding {
-        background-position-y: -100px;
-        min-height: 250px;
-    }
-
-    .projects-card-text h1 {
-        font-size: 1.75rem;
-        line-height: 30px;
-    }
-
-    .projects-card-text p {
-        font-size: 1.35rem;
-        line-height: 30px;
-    }
-
-    .projects-card-text a {
-        font-size: 0.9rem;
-    }
-
     /* Contact Section */
     .contact-main {
         flex-direction: row;
         justify-content: space-around;
-    }   
+    }
 
     .contact-text {
         min-width: 50%;
@@ -1265,7 +1075,7 @@ svg {
     .email p {
         font-size: 0.9rem;
         color: var(--paragraphColor);
-        font-family: 'Work Sans', sans-serif;
+        font-family: "Work Sans", sans-serif;
     }
 
     .contact-sosmed i {
@@ -1297,7 +1107,7 @@ svg {
 }
 
 /* Ukuran Laptop */
-@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+@media only screen and (min-width: 1024px) {
     /* Navbar Section */
     .navbar-logo h1 {
         font-size: 1.5rem;
@@ -1516,61 +1326,8 @@ svg {
         font-size: 1rem;
     }
 
-    /* Projects Section */
-    .portofolio-menu {
-        gap: 0 20px;
-    }
-
-    .portofolio-menu button {
-        font-size: 1rem;
-        width: 200px;
-    }
-
-    .portofolio-menu button:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        background-color: var(--paragraphColor);
-    }
-
-    .poster-main {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .projects-main {
-        display: none;
-    }
-
-    .projects-main.projects-second {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .projects-card {
-        width: 35%;
-        height: auto;
-    }
-
-    .projects-card-image,
-    .projects-card-image.wedding {
-        min-height: 280px;
-    }
-
-    .projects-card-text h1 {
-        font-size: 1.9rem;
-        line-height: 30px;
-    }
-
-    .projects-card-text p {
-        font-size: 1.75rem;
-        line-height: 30px;
-    }
-
-    .projects-card-text a {
-        font-size: 1rem;
+    .project-main {
+        display: block;
     }
 
     /* Contact Section */
@@ -1585,7 +1342,7 @@ svg {
         flex-direction: column;
         gap: 20px 0;
     }
-    
+
     .contact-text h1 {
         font-size: 2.3rem;
         text-align: left;
@@ -1598,7 +1355,7 @@ svg {
     }
 
     .contact-sosmed h2 {
-        font-family: 'Poppins',sans-serif;
+        font-family: "Poppins", sans-serif;
         color: var(--textColor);
         font-size: 1.75rem;
     }
@@ -1612,7 +1369,7 @@ svg {
     .email p {
         font-size: 1rem;
         color: var(--paragraphColor);
-        font-family: 'Work Sans', sans-serif ;
+        font-family: "Work Sans", sans-serif;
     }
 
     .sosmed {
@@ -1653,287 +1410,6 @@ svg {
     }
 
     .input {
-        font-size: 1rem;
-    }
-}
-
-/* Ukuran Desktop */
-@media (min-width: 1366px) {
-    /* Navbar Section */
-    .navbar-logo h1 {
-        font-size: 1.5rem;
-    }
-
-    .navbar-menu {
-        background-color: transparent;
-        position: relative;
-        flex-direction: row;
-        align-items: center;
-        padding: 0;
-        width: max-content;
-        height: auto;
-        top: 0;
-        gap: 0 20px;
-        transform: translateX(0);
-    }
-
-    .navbar-menu a {
-        font-size: 1rem;
-    }
-
-    #contact-me {
-        display: none;
-    }
-
-    .menu-contact {
-        display: block;
-    }
-
-    .menu-contact a {
-        display: block;
-        font-family: "Poppins", sans-serif;
-        text-decoration: none;
-        color: var(--textColor);
-        font-weight: 550;
-        font-size: 0.9rem;
-        padding: 8px 13px;
-        border-radius: 25px;
-        background-color: var(--buttonColor);
-        transition: all 0.3s ease-in;
-    }
-
-    .menu-contact a:hover {
-        transform: scale(1.03);
-        background-color: var(--paragraphColor);
-    }
-
-    .hamburger-menu {
-        display: none;
-    }
-
-    /* Hero Section */
-    main {
-        padding-top: 2%;
-    }
-
-    .hero {
-        justify-content: space-between;
-        padding: 0 70px;
-    }
-
-    .hero-image {
-        display: block;
-    }
-
-    .hero-image img {
-        height: 450px;
-        width: 290px;
-    }
-
-    .hero-text {
-        text-align: left;
-        align-items: start;
-        justify-content: center;
-        text-shadow: var(--shadow);
-    }
-
-    .hero-text h1 {
-        font-size: 1.9rem;
-        margin-bottom: 30px;
-    }
-
-    .hero-text h2 {
-        font-size: 2.3rem;
-        line-height: 40px;
-    }
-
-    .hero-text h3 #element {
-        font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-        width: 70%;
-        margin: 15px 0;
-    }
-
-    .content-header h1 {
-        font-size: 2rem;
-    }
-
-    /* Services Section */
-    .services-content {
-        gap: 0 0;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: stretch;
-    }
-
-    .services-card {
-        width: 30%;
-        height: auto;
-    }
-
-    .services-card-content {
-        width: 90%;
-    }
-
-    .services-card-header h1 {
-        font-size: 1.9rem;
-    }
-
-    .services-card-text p {
-        line-height: normal;
-        font-size: 1rem;
-    }
-
-    .services-card-image img {
-        height: 100px;
-    }
-
-    /* Skill Section */
-    .skills-items {
-        flex-direction: row;
-        align-items: center;
-        padding: 15px 20px;
-        gap: 0 20px;
-        width: 30%;
-    }
-
-    .skills-items img,
-    svg {
-        height: 50px;
-    }
-
-    .skills-items h1 {
-        font-size: 1.25rem;
-    }
-
-    /* About Section */
-    .about {
-        height: auto;
-    }
-
-    .about-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .about-image {
-        display: block;
-    }
-
-    .about-image img {
-        height: 400px;
-    }
-
-    .about-main {
-        align-items: start;
-        width: 40%;
-    }
-
-    .about-main-header h1 {
-        font-size: 1.9rem;
-        line-height: 30px;
-    }
-
-    .about-main-header h2 {
-        text-align: left;
-    }
-
-    .about-main-header h2 #about-element {
-        font-size: 1.75rem;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-
-    .about-experience {
-        justify-content: start;
-        gap: 0 20px;
-        width: 100%;
-    }
-
-    .about-experience-items {
-        width: 45%;
-    }
-
-    .about-experience-items h1 {
-        font-size: 1.9rem;
-    }
-
-    .about-experience-items p {
-        font-size: 1rem;
-    }
-
-    .about-cta {
-        gap: 0 25px;
-    }
-
-    .about-cta a {
-        font-size: 1rem;
-    }
-
-    /* Projects Section */
-    .portofolio-menu {
-        gap: 0 20px;
-    }
-
-    .portofolio-menu button {
-        font-size: 1rem;
-        width: 200px;
-    }
-
-    .portofolio-menu button:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        background-color: var(--paragraphColor);
-    }
-
-    .poster-main {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .projects-main {
-        display: none;
-    }
-
-    .projects-main.projects-second {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 40px 80px;
-        max-width: 100%;
-    }
-
-    .projects-card {
-        width: 35%;
-        height: auto;
-    }
-
-    .projects-card-image,
-    .projects-card-image.wedding {
-        min-height: 280px;
-    }
-
-    .projects-card-text h1 {
-        font-size: 1.9rem;
-        line-height: 30px;
-    }
-
-    .projects-card-text p {
-        font-size: 1.75rem;
-        line-height: 30px;
-    }
-
-    .projects-card-text a {
         font-size: 1rem;
     }
 }

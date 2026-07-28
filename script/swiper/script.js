@@ -1,23 +1,29 @@
 let swiper = new Swiper(".swipper", {
-    slidesPerView: "auto",
-    effect: "coverflow",
+    effect: "coverfl    ow",
     coverflowEffect: {
         rotate: 0, //sudut rotasi slide samping
         stretch: 0, // jarak horizontal antar slide
         depth: 0, // kedalaman efek 3D
         modifier: 1, // seberapa kuat efek 3D-nya
-        slideShadows: true,
+        slideShadows: false,
     },
     loop: true,
     speed: 1000,
     grabCursor: "true",
     spaceBetween: 30,
-    centeredSlides: true,
     autoplay: {
         delay: 3000,
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+    },
+
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 40, 
+            centeredSlides: false, 
+        },
     },
 });
