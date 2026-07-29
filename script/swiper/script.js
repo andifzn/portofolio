@@ -39,6 +39,9 @@ const gallerySwiper = new Swiper(".gallery-content", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
+    observer: true,
+    observeParents: true,
+    resizeObserver: true,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
@@ -80,7 +83,7 @@ const gallerySwiper = new Swiper(".gallery-content", {
         576: {
             slidesPerView: 2,
         },
-        
+
         690: {
             slidesPerView: 2.5,
         },
@@ -91,11 +94,12 @@ const gallerySwiper = new Swiper(".gallery-content", {
         },
 
         1024: {
-            slidesPerView: 3.5,
+            slidesPerView: 1.5,
         },
 
         1200: {
-            slidesPerView: 4.5,
+            slidesPerView:2,
         },
     },
 });
+
