@@ -16,7 +16,7 @@ document.addEventListener("click", (e) => {
 });
 
 var typed = new Typed("#element", {
-    strings: ["Front End Developer", "PC - Laptop Repair", "UI / UX Designer"],
+    strings: ["Full Stack Web Developer", "PC - Laptop Repair", "UI / UX Designer"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -26,7 +26,7 @@ var typed = new Typed("#element", {
 });
 
 var typed = new Typed("#about-element", {
-    strings: ["Front End Developer", "PC - Laptop Repair", "UI / UX Designer"],
+    strings: ["Full Stack Web Developer", "PC - Laptop Repair", "UI / UX Designer"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,

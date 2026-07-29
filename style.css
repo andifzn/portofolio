@@ -525,7 +525,14 @@ svg {
 }
 
 .project-card-image.third {
-    background: url('assets/img/uni-reservasi.png');
+    background: url('assets/img//uni-reservasi/uni-reservasi.png');
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.project-card-image.fourth {
+    background: url('assets/img/toko-mekkah.jpg');
     object-fit: cover;
     background-position: center;
     background-size: cover;
@@ -1328,6 +1335,24 @@ svg {
 
     .project-main {
         display: block;
+    }
+
+    /* card content */
+    .swiper-slide {
+        height: auto;
+        display: flex;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-text {
+        display: flex;
+        flex-grow: 1;
     }
 
     /* Contact Section */
