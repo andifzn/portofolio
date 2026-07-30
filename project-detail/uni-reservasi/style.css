@@ -295,6 +295,9 @@ main {
     padding-top: 10%;
     background-color: var(--primaryBackground);
     height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 }
 
 /* Hero Section */
@@ -442,7 +445,8 @@ main {
 .tech-stack,
 .what-i-learned,
 .my-role,
-.technical-highlights {
+.technical-highlights,
+.hire-me {
     position: relative;
     width: 100%;
     height: auto;
@@ -469,7 +473,8 @@ main {
 .gallery-header h3,
 .what-i-learned-header h3,
 .my-role-header h3,
-.technical-highlights-header h3 {
+.technical-highlights-header h3,
+.hire-me-text h3 {
     font-family: "Lexend", sans-serif;
     color: var(--textColor);
     font-weight: 550;
@@ -479,7 +484,8 @@ main {
 .key-features-list p,
 .what-i-learned-list p,
 .my-role-list p,
-.technical-highlights-list p {
+.technical-highlights-list p,
+.hire-me-text p {
     font-size: 1rem;
     font-family: "Work Sans", sans-serif;
     color: var(--paragraphColor);
@@ -584,7 +590,7 @@ main {
 .more-information {
     position: relative;
     height: auto;
-    padding: 45px 30px;
+    padding: 45px 20px;
     border: 2px solid var(--navbarBackground);
     border-right: none;
     border-left: none;
@@ -597,6 +603,55 @@ main {
     display: flex;
     flex-direction: column;
     gap: 35px;
+}
+
+.hire-me {
+    padding: 0px 20px 45px 20px;
+}
+
+.hire-me-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.hire-me-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.hire-me-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--buttonColor);
+    width: max-content;
+    height: max-content;
+    padding: 10px 15px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hire-me-button a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--textColor);
+}
+
+.hire-me-button:hover {
+    transform: scale(1.1);
+    background-color: var(--paragraphColor);
+    transition: all 0.3s linear;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -778,6 +833,34 @@ main {
         width: 2px;
         left: -8%;
         top: 0;
+    }
+
+    /* Hire Me Section */
+    .hire-me {
+        border: 2px solid var(--borderColor);
+        background-color: #6d6ebb2d;
+        border-radius: 8px;
+    }
+
+    .hire-me-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hire-me-text {
+        width: 80%;
+        gap: 10px;
+    }
+
+    .hire-me-button {
+        width: auto;
+    }
+
+    .hire-me-button:hover {
+        transform: scale(1.1);
+        background-color: var(--paragraphColor);
+        transition: all 0.3s linear;
     }
 }
 
