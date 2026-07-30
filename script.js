@@ -68,3 +68,17 @@ buttons.forEach((button) => {
         document.getElementById(targetId).classList.add("active");
     });
 });
+
+
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-screen");
+    if (loader) {
+        // Beri efek fade-out halus
+        loader.classList.add("hide");
+        
+        // Hapus dari DOM setelah efek transisi 0.5 detik selesai
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 500);
+    }
+});
