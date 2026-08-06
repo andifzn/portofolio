@@ -1,6 +1,14 @@
 const navbarMenu = document.querySelector(".navbar-menu");
 const hamburgerMenu = document.getElementById("hamburger-menu");
 
+const lenis = new Lenis();
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 hamburgerMenu.addEventListener("click", () => {
     navbarMenu.classList.toggle("pop-up");
 });
@@ -16,7 +24,11 @@ document.addEventListener("click", (e) => {
 });
 
 var typed = new Typed("#element", {
-    strings: ["Full Stack Web Developer", "PC - Laptop Repair", "UI / UX Designer"],
+    strings: [
+        "Full Stack Web Developer",
+        "PC - Laptop Repair",
+        "UI / UX Designer",
+    ],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -26,7 +38,11 @@ var typed = new Typed("#element", {
 });
 
 var typed = new Typed("#about-element", {
-    strings: ["Full Stack Web Developer", "PC - Laptop Repair", "UI / UX Designer"],
+    strings: [
+        "Full Stack Web Developer",
+        "PC - Laptop Repair",
+        "UI / UX Designer",
+    ],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -69,13 +85,12 @@ buttons.forEach((button) => {
     });
 });
 
-
 window.addEventListener("load", () => {
     const loader = document.getElementById("loading-screen");
     if (loader) {
         // Beri efek fade-out halus
         loader.classList.add("hide");
-        
+
         // Hapus dari DOM setelah efek transisi 0.5 detik selesai
         setTimeout(() => {
             loader.style.display = "none";

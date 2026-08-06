@@ -7,7 +7,6 @@ let swiper = new Swiper(".swipper", {
         modifier: 1, // seberapa kuat efek 3D-nya
         slideShadows: false,
     },
-    loop: true,
     speed: 1000,
     grabCursor: "true",
     spaceBetween: 30,
