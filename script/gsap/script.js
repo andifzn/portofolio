@@ -175,10 +175,11 @@ ScrollTrigger.matchMedia({
                 {
                     y: 0,
                     opacity: 1,
-                    duration: 0.6,
+                    duration: 0.1,
+                    ease: "power3.out",
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 100%",
+                        start: "top center",
                         once: true,
                     },
                 },
