@@ -300,6 +300,7 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 10px;
 }
 
 .hero-text h1 {
@@ -308,8 +309,6 @@ main {
     font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 20px;
-    line-height: 0;
 }
 
 .hero-text h2 {
@@ -340,7 +339,7 @@ main {
     font-size: 0.75rem;
     display: block;
     width: 85%;
-    margin: 15px 0;
+    margin-bottom: 10px;
 }
 
 .hero-cta a {
@@ -422,6 +421,8 @@ main {
     border: 2px solid var(--borderColor);
     width: 100%;
     transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .services-card:hover {
