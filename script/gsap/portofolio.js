@@ -66,35 +66,13 @@ ScrollTrigger.matchMedia({
         );
 
         // Project Gallery
-        const gallery = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".gallery",
-                start: "top 80%",
-                toggleActions: "play none none none",
-                once: true,
-            },
-        });
-
-        gallery.fromTo(
-            ".gallery-header",
-            {
-                y: 100,
-                opacity: 0,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 0.5,
-            },
-        );
-
-        gsap.from(".gallery-content", {
+        gsap.from(".gallery-header", {
             y: 80,
             autoAlpha: 0,
             duration: 1.2,
             ease: "power3.out",
             scrollTrigger: {
-                trigger: ".gallery-content",
+                trigger: ".gallery-container",
                 start: "top 80%", // Animasi mulai saat bagian atas gallery mencapai 80% layar
                 toggleActions: "play none none",
                 once: true,
@@ -110,7 +88,7 @@ ScrollTrigger.matchMedia({
             ease: "back.out(1.2)",
             scrollTrigger: {
                 trigger: ".gallery-content",
-                start: "top 75%",
+                start: "top center",
                 toggleActions: "play none none",
                 once: true,
             },

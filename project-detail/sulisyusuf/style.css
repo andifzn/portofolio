@@ -24,6 +24,21 @@
     }
 }
 
+/* CSS Wajib untuk Lenis */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
 #loading-screen {
     position: fixed;
     inset: 0;
@@ -175,32 +190,6 @@ body {
     --boxShadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* slide in back animation */
-@-webkit-keyframes scale-in-center {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-@keyframes scale-in-center {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 header {
     height: auto;
     background-color: rgba(0, 0, 50, 0.4);
@@ -321,13 +310,6 @@ main {
     align-items: center;
     gap: 10px;
     height: max-content;
-    transition: all 0.3s ease-in-out;
-}
-
-.navigation:hover {
-    transform: scale(120%);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
 }
 
 .navigation a {
@@ -342,9 +324,6 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 35px;
-    -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-        both;
-    animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .hero-text {
@@ -379,7 +358,7 @@ main {
     gap: 5px;
     align-items: center;
     border-radius: 8px;
-    transition: all 0.3s linear;
+    transition: transform 0.3s linear;
 }
 
 .hero-button a {
@@ -397,7 +376,7 @@ main {
 }
 
 .hero-image {
-    background: url("../../assets/img/sulisyusuf/sulisyusuf.png");
+    background: url("../../assets/img/uni-reservasi/uni-reservasi.png");
     width: 100%;
     min-height: 280px;
     object-fit: cover;
@@ -544,7 +523,7 @@ main {
 
 /* Gallery */
 .gallery {
-    padding: 0px 20px;
+    padding: 45px 20px;
 }
 
 .gallery-content {
@@ -613,6 +592,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
     gap: 15px;
 }
@@ -625,12 +605,12 @@ main {
 }
 
 .hire-me-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     background-color: var(--buttonColor);
     width: max-content;
     height: max-content;
-    display: flex;
-    align-items: center;
-    gap: 15px;
     padding: 10px 15px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -802,6 +782,7 @@ main {
 
         display: block;
     }
+
     /* More Information */
     .more-information-container {
         flex-direction: row;
@@ -839,6 +820,7 @@ main {
         border: 2px solid var(--borderColor);
         background-color: #6d6ebb2d;
         border-radius: 8px;
+        padding: 45px 20px 45px 20px;
     }
 
     .hire-me-container {
@@ -854,6 +836,12 @@ main {
 
     .hire-me-button {
         width: auto;
+    }
+
+    .hire-me-button:hover {
+        transform: scale(1.1);
+        background-color: var(--paragraphColor);
+        transition: all 0.3s linear;
     }
 }
 

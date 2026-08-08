@@ -3,17 +3,18 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.fromTo(
     ".skills-items",
     {
-        y: 100,
-        opacity: 0,
+        scale: 0.8,
+        autoAlpha: 0,
     },
     {
-        y: 0,
-        opacity: 1,
-        duration: 0.1,
-        stagger: 0.1,
+        scale: 1,
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "back.out(1.2)",
+        stagger: 0.08,
         scrollTrigger: {
             trigger: ".skills-content",
-            start: "top 80%",
+            start: "top center",
             once: true,
         },
     },
@@ -22,7 +23,7 @@ gsap.fromTo(
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".about-content",
-        start: "top 80%",
+        start: "top center",
         toggleActions: "play none none none",
         once: true,
     },
@@ -65,8 +66,8 @@ ScrollTrigger.matchMedia({
                 duration: 0.1,
                 stagger: 0.1,
                 scrollTrigger: {
-                    trigger: ".content-header",
-                    start: "top 80%",
+                    trigger: ".services-content",
+                    start: "top center",
                     once: true, // Hanya perlu dimainkan sekali
                 },
             },
@@ -110,6 +111,75 @@ ScrollTrigger.matchMedia({
                 stagger: 0.1,
             },
         );
+
+        gsap.from(".projects-header", {
+            y: 80,
+            autoAlpha: 0,
+            duration: 1.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".projects-container",
+                start: "top center",
+                toggleActions: "play none none",
+                once: true,
+            },
+        });
+
+        gsap.from(".project-content .swiper-slide", {
+            scale: 0.8,
+            autoAlpha: 0,
+            duration: 1,
+            stagger: 0.15,
+            ease: "back.out(1.2)",
+            scrollTrigger: {
+                trigger: ".project-content",
+                start: "top 60%",
+                toggleActions: "play none none",
+                once: true,
+            },
+        });
+
+        // Contact Section
+        gsap.from(".contact-header", {
+            y: -50,
+            opacity: 0,
+            duration: 1,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: ".contact",
+                start: "top 65%",
+                toggleActions: "play none none",
+                once: true,
+            }
+        })
+
+        gsap.from(".contact-content", {
+            scale: 0.3, // Mulai dari ukuran sangat kecil (30%)
+            autoAlpha: 0, // Sembunyi & transparan di awal
+            duration: 1,
+            ease: "back.out(1.2)",
+            stagger: 0.4,
+            scrollTrigger: {
+                trigger: ".contact-main",
+                start: "top 65%",
+                toggleActions: "play none none",
+                once: true,
+            },
+        });
+
+        gsap.from(".contact-form", {
+            y: -250,
+            autoAlpha: 0, // Sembunyi & transparan di awal
+            duration: 2,
+            ease: "back.out(1.2)",
+            scrollTrigger: {
+                trigger: ".contact-main",
+                start: "top 65%",
+                toggleActions: "play none none",
+                once: true,
+            },
+            
+        });
     },
 
     // 2. KHUSUS MOBILE (Layar 768px ke bawah)
